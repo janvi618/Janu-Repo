@@ -1,0 +1,225 @@
+{
+  "updatedAt": "2026-09-11",
+  "schedule": {
+    "active": true,
+    "label": "Daily mornings · Central time",
+    "timezone": "America/Chicago"
+  },
+  "brief": {
+    "title": "Test repeat purchase before selecting a format.",
+    "summary": "Keep comparing paid repeat and contribution across existing shelf-stable, fresh and functional options. A newly recorded Fi supplement recall adds a supplier-control check before consumer trials. Fancy Feast's Amazon-exclusive collection adds channel context, not evidence of demand.",
+    "question": "Which option offers a clear advantage at a price owners will keep paying?"
+  },
+  "assumptions": [
+    {
+      "id": "formats",
+      "title": "Fresh and mixed feeding can expand beyond a premium niche.",
+      "question": "Is growth incremental to the category, or mainly switching from existing products?",
+      "status": "Open",
+      "theme": "Formats & occasions"
+    },
+    {
+      "id": "value",
+      "title": "Consumers will pay more for benefits they can understand and verify.",
+      "question": "Which benefits sustain repeat purchase at the target price?",
+      "status": "Open",
+      "theme": "Value & benefits"
+    },
+    {
+      "id": "access",
+      "title": "Retail access and convenience can be as important as the proposition.",
+      "question": "Which channel or distribution constraint could prevent adoption?",
+      "status": "Open",
+      "theme": "Routes to market"
+    }
+  ],
+  "signals": [
+    {
+      "id": "fi-supplement-recall-2026",
+      "title": "Fi supplement recall adds a supplier-control check",
+      "source": "Fi / Vet Plus, Inc.; announcement hosted by FDA",
+      "url": "https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/fi-recalls-supplements-dogs-because-possible-salmonella-contamination",
+      "date": "2026-09-08",
+      "fact": "Fi announced a recall on September 3; FDA published it September 8. It covers 180 g Calming supplements lot 26118 and 180 g 8-in-1 Formula supplements lot 26159 for possible Salmonella linked to a supplied ingredient. Fi reported its manufacturer suspended production during investigation. Distribution included direct sales, Amazon and Chewy.",
+      "implication": "Include ingredient qualification and lot traceability in prototype safety checks; benefit substantiation alone does not address manufacturing risk.",
+      "question": "Can a proposed supplier document ingredient controls, batch release and traceability before any feeding trial?",
+      "dimension": "Consumer",
+      "assumptionId": "value",
+      "relationship": "Context",
+      "confidence": "Verified notice; business implication unvalidated",
+      "origin": "Company announcement September 3; FDA publication September 8; newly recorded September 11, 2026",
+      "priority": "Review",
+      "limitation": "Company recall notice, not a completed root-cause investigation. These two supplement lots do not establish risk rates for other supplements, dental chews or fresh food, or a change in willingness to pay."
+    },
+    {
+      "id": "fancy-feast-paige-edit-2026",
+      "title": "Fancy Feast uses an Amazon-exclusive curated collection",
+      "source": "Nestlé Purina / Fancy Feast",
+      "url": "https://newscenter.purina.com/2026-09-10-Fancy-Feast-and-Paige-DeSorbo-Launch-The-Paige-Edit,-a-Limited-Edition-Collection-of-Daphnes-Favorites",
+      "date": "2026-09-10",
+      "fact": "Fancy Feast announced The Paige Edit on September 10. The release dates initial Amazon-exclusive availability to September 1, while supplies last. The collection includes two Gems recipes and one Classic Broths recipe; the company distinguishes complete adult-cat Gems meals from supplemental Broths.",
+      "implication": "A curated bundle of existing recipes is another route to test discovery and channel fit without assuming a new formulation is needed.",
+      "question": "Would a curated bundle produce paid repeat beyond promotion, compared with buying the same recipes separately?",
+      "dimension": "Retailer",
+      "assumptionId": "access",
+      "relationship": "Context",
+      "confidence": "Verified announcement; adoption unmeasured",
+      "origin": "September 10, 2026 publication; company-stated September 1 availability",
+      "priority": "Review",
+      "limitation": "Company-reported availability, not independently checked stock, sales, retention or incremental demand. A limited collection does not prove channel exclusivity improves adoption."
+    },
+    {
+      "id": "appa-dog-value-2026",
+      "title": "Owners combine premium intentions with value choices",
+      "source": "American Pet Products Association",
+      "url": "https://americanpetproducts.org/news/americas-dog-owners-are-becoming-smarter-spenders",
+      "date": "2026-07-22",
+      "fact": "APPA's 2026 Dog Report, based on its 2025 National Pet Owners Survey, reported premium food fed by 31% of owners and basic food by 21%. It reported 32% buying dog food at supermarkets and 22% at discount retailers, alongside greater blending of premium and budget choices.",
+      "implication": "An affordable premium add-on may fit current routines better than an exclusively premium feeding proposition.",
+      "question": "Which owner segments protect premium benefits, and what per-meal price threshold drives switching or blending?",
+      "dimension": "Consumer",
+      "assumptionId": "value",
+      "relationship": "Challenges",
+      "confidence": "Verified source; implication unvalidated",
+      "origin": "2026 report of 2025 survey data",
+      "priority": "Review",
+      "limitation": "Trade-association survey summary; historical 2025 behavior, not a live measure of September 2026 shopping."
+    },
+    {
+      "id": "gm-fresh-2025",
+      "title": "Blue Buffalo launches fresh food through major retailers",
+      "source": "General Mills",
+      "url": "https://www.generalmills.com/news-and-stories/press-releases/blue-buffalo-launches-love-made-fresh-nationwide-making-every-meal-a-fresh-act-of-love-for-your-dog",
+      "date": "2025-10-21",
+      "fact": "Blue Buffalo announced the nationwide launch of Love Made Fresh in resealable tubs and slice-and-serve rolls. The announcement named Walmart, Target, Kroger and Meijer among retailers and explicitly positioned the range for mixing fresh food with dry food.",
+      "implication": "A flexible fresh topper may offer a more accessible upgrade than asking owners to replace their entire feeding routine.",
+      "question": "Which pack size, daily serving cost and storage format best support repeat purchase among mixed-feeding households?",
+      "dimension": "Retailer",
+      "assumptionId": "formats",
+      "relationship": "Supports",
+      "confidence": "Verified source; implication unvalidated",
+      "origin": "2025 launch baseline",
+      "priority": "Review",
+      "limitation": "Company announcement; establishes launch and positioning, not market adoption or sales performance."
+    },
+    {
+      "id": "gm-occasion-treats-2026",
+      "title": "Football rituals become pet-treat occasions",
+      "source": "General Mills",
+      "url": "https://www.generalmills.com/news-and-stories/press-releases/blue-buffalo-launches-new-limited-edition",
+      "date": "2026-09-09",
+      "fact": "Blue Buffalo announced Game Day Nudges in football-themed packaging and football-shaped Health Bars Touchdown Treats. The company reported Game Day Nudges available at participating retailers and scheduled Health Bars Touchdown Treats for November 2.",
+      "implication": "Limited seasonal shapes and packaging could create incremental treating occasions tied to shared household rituals.",
+      "question": "Do these occasions add category purchases or mainly shift purchases from the everyday treat range?",
+      "dimension": "Competitor",
+      "assumptionId": "value",
+      "relationship": "Context",
+      "confidence": "Verified source; implication unvalidated",
+      "origin": "2026 verified announcement",
+      "priority": "Review",
+      "limitation": "Company announcement. November 2 availability is a future launch plan as of verification, not a completed rollout."
+    },
+    {
+      "id": "gm-gravy-2026",
+      "title": "One cat-food format offers two meal experiences",
+      "source": "General Mills",
+      "url": "https://www.generalmills.com/news-and-stories/press-releases/blue-buffalo-introduces-blue-tastefuls-irresistible-gravy-experience",
+      "date": "2026-03-12",
+      "fact": "Blue Buffalo introduced a cat food that can be served dry or mixed with water to create gravy. The launch offered chicken-and-brown-rice and salmon-and-brown-rice recipes and reported availability at major retailers nationwide.",
+      "implication": "Shelf-stable meal customization could offer owners more serving variety without adding another food format to the pantry.",
+      "question": "Does the two-mode format improve repeat purchase, perceived variety or ease of serving in multicat households?",
+      "dimension": "Competitor",
+      "assumptionId": "formats",
+      "relationship": "Supports",
+      "confidence": "Verified source; implication unvalidated",
+      "origin": "2026 verified launch",
+      "priority": "Review",
+      "limitation": "Company announcement; functional benefits and category-first language are manufacturer claims, not independently validated here."
+    },
+    {
+      "id": "mars-fresh-therapeutic-2026",
+      "title": "Fresh format expands into veterinary diets",
+      "source": "Mars / Royal Canin",
+      "url": "https://www.mars.com/news-and-stories/press-releases-statements/royal-canin-launches-its-first-fresh-therapeutic-diet",
+      "date": "2026-07-14",
+      "fact": "Royal Canin announced its first fresh, fully cooked therapeutic diet portfolio for dogs in the United States. The range covers gastrointestinal low-fat, selected-protein pork and appetite-stimulation formulas, distributed through veterinary practices and veterinary online pharmacy partners.",
+      "implication": "Fresh food may increasingly compete on clinical credibility and professional distribution, alongside ingredient and lifestyle positioning.",
+      "question": "What clinical evidence, channel partnerships and cold-chain capabilities would be required to compete credibly?",
+      "dimension": "Competitor",
+      "assumptionId": "value",
+      "relationship": "Supports",
+      "confidence": "Verified source; implication unvalidated",
+      "origin": "2026 verified launch",
+      "priority": "Review",
+      "limitation": "Manufacturer launch announcement; the formulas' therapeutic positioning is reported, not independently assessed."
+    },
+    {
+      "id": "purina-capacity-2026",
+      "title": "Purina adds capacity and manufacturing flexibility",
+      "source": "Nestlé Purina",
+      "url": "https://newscenter.purina.com/2026-08-31-Purina-Opens-New-Pet-Food-Factory-in-Ohio,-Its-First-Built-from-the-Ground-Up-in-More-Than-50-Years",
+      "date": "2026-08-31",
+      "fact": "Purina announced the opening of a Batavia, Ohio factory representing an investment exceeding $550 million. The company said the factory was already producing Pro Plan, Purina ONE and Dog Chow, and incorporated automation, robotics and digital manufacturing tools.",
+      "implication": "Large investments in flexible capacity may increase competitive pressure on availability, operating efficiency and product iteration.",
+      "question": "Which formats and channels gain capacity, and does this change competitive service levels or launch cadence?",
+      "dimension": "Technology",
+      "assumptionId": "access",
+      "relationship": "Context",
+      "confidence": "Verified source; implication unvalidated",
+      "origin": "2026 verified announcement",
+      "priority": "Review",
+      "limitation": "Company announcement; capacity and operating benefits are reported plans and claims rather than independently audited outcomes."
+    },
+    {
+      "id": "fda-raw-recall-2026",
+      "title": "A raw-food recall raises a process-control question",
+      "source": "FDA",
+      "url": "https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/northwest-naturals-voluntarily-recalls-two-raw-pet-food-products-because-possible-salmonella",
+      "date": "2026-08-28",
+      "fact": "An FDA-hosted company announcement recalled two specified frozen raw chicken pet-food lots following positive contamination tests. The announcement reported nationwide retail distribution and no illnesses reported at the time of the announcement.",
+      "implication": "Process transparency and demonstrated safety controls could influence trust in less-processed food propositions.",
+      "question": "How do owners distinguish raw from fully cooked fresh food, and which safety information changes purchase confidence?",
+      "dimension": "Consumer",
+      "assumptionId": "value",
+      "relationship": "Context",
+      "confidence": "Verified source; implication unvalidated",
+      "origin": "2026 verified recall announcement",
+      "priority": "Review",
+      "limitation": "FDA-hosted company recall notice; a lot-specific incident, not evidence that all fresh foods share the same risk."
+    },
+    {
+      "id": "appa-market-2026",
+      "title": "Pet ownership grows while spending becomes more selective",
+      "source": "American Pet Products Association",
+      "url": "https://americanpetproducts.org/news/u.s.-pet-industry-reaches-158-billion-in-2025-poised-for-continued-growth-in-2026",
+      "date": "2026-03-26",
+      "fact": "APPA reported total U.S. pet-industry expenditure of $158 billion in 2025 and forecast $165 billion for 2026. The report put 2025 pet ownership at 95 million U.S. households and cat ownership at 53 million households, up 5% year over year.",
+      "implication": "Cat-focused innovation could merit greater attention, but category expenditure growth alone does not establish demand for a specific food concept.",
+      "question": "Which cat-food needs and formats show incremental demand after separating household growth, price and consumption?",
+      "dimension": "Economics",
+      "assumptionId": "formats",
+      "relationship": "Context",
+      "confidence": "Verified source; implication unvalidated",
+      "origin": "2025 market baseline; 2026 forecast",
+      "priority": "Review",
+      "limitation": "Total pet-industry figures include categories beyond food; 2026 expenditure is a forecast, not an actual result."
+    }
+  ],
+  "runs": [
+    {
+      "date": "2026-09-11",
+      "summary": "Morning research pass: reviewed 11 distinct readable public pages: 10 primary pages (FDA recall index, Fi notice, Northwest Naturals notice; APPA news index; Purina news index, Paige Edit and Innovation Prize announcements; General Mills football-treat announcement; Chewy corporate overview; Freshpet Q2 results) and one Houston Chronicle lead used only to locate the FDA notice. Search snippets, repeat opens, failed pages and empty indexes are excluded. Added two URL/event-deduplicated signals: Fi's September 3 recall, posted by FDA September 8, and Fancy Feast's September 10 announcement of September 1 availability. Rechecked existing raw-recall, football-launch and Freshpet evidence without duplicating events. Fi contextualizes value/benefit validation; the bundle contextualizes access. Neither resolves willingness to pay, incremental format growth or the importance of distribution. Opportunity rankings and proposed experiments remain unchanged. Updated both evidence files; preserved prior records and history. Workspace records returned zero rows, so there were no queued missions, scenarios or user overrides to apply. Coverage gaps: Chewy release content was unavailable, Freshpet's news index failed, and Tetra Pak's case index did not load usable article content. No new consumer survey, retail sell-through, entrant cost quotes, technology outcome or global regulatory change was verified. Purina's September 1 prize announcement was reviewed but not added as evidence of demand or proven technology. This was a bounded public-source scan, not exhaustive market coverage.",
+      "sources": 11
+    },
+    {
+      "date": "2026-09-11",
+      "summary": "Ran opportunity and adversarial research tracks. Revised novelty and fresh-affordability assumptions, then designed comparative experiments. Commercial scenarios remain explicitly illustrative.",
+      "sources": 11
+    },
+    {
+      "date": "2026-09-10",
+      "summary": "Established an eight-source baseline across launches, consumer value choices, veterinary distribution, manufacturing and safety. Separated historical survey results and future plans from observed events.",
+      "sources": 8
+    }
+  ]
+}
