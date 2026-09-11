@@ -265,6 +265,24 @@
         "measure": "A substantiated benefit plus full-price repeat and incremental contribution. Neither stated intent nor an incumbent’s acceptance validates the new product.",
         "stop": "Stop if the intended serving cannot deliver the proposed benefit, if the difference does not survive direct comparison, or if the required validation exceeds the feasible launch plan."
       }
+    },
+    {
+      "id": "bundle",
+      "title": "Cat discovery bundle",
+      "who": "Cat owners choosing among recipes who may value a simpler way to discover and replenish suitable options.",
+      "proposition": "Curate existing recipes with clear selection and serving guidance before requiring a new formulation. Difficulty choosing recipes remains a hypothesis to investigate.",
+      "support": "Fancy Feast announced an Amazon-exclusive curated collection of existing recipes, showing a real assortment and channel move.",
+      "challenge": "Availability and promotion do not establish repeat purchase, incremental demand or an advantage over buying the same recipes separately.",
+      "unknown": "Whether the bundle adds paid repeat or contribution rather than repackaging existing purchases, and whether any advantage survives discounting.",
+      "sourceIds": [
+        "fancy-feast-paige-edit-2026"
+      ],
+      "experiment": {
+        "title": "Does curation change paid repeat?",
+        "design": "Compare a curated bundle with the same recipes sold separately, showing real prices and a no-purchase option.",
+        "measure": "Paid repeat and incremental contribution after promotions and replaced purchases. Set the minimum improvement before launch.",
+        "stop": "Stop when the bundle mainly repackages existing purchases or its advantage disappears after costs and competitive discounts."
+      }
     }
   ],
   "missionResults": []
