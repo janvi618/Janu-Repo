@@ -1,0 +1,271 @@
+{
+  "updatedAt": "2026-09-11",
+  "question": "Which pet-food idea should we test next, and what would change our choice?",
+  "sources": [
+    {
+      "id": "fi-supplement-recall-2026",
+      "title": "Fi supplement recall: two specified lots",
+      "publisher": "Fi / Vet Plus, Inc.; FDA-hosted company announcement",
+      "url": "https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/fi-recalls-supplements-dogs-because-possible-salmonella-contamination",
+      "dateLabel": "Company announcement 2026-09-03; FDA publication 2026-09-08; verified 2026-09-11",
+      "fact": "Fi recalled 180 g Calming lot 26118 and 180 g 8-in-1 Formula lot 26159 for possible Salmonella associated with a supplied ingredient. The notice reports a production suspension and direct, Amazon and Chewy distribution.",
+      "implication": "Proposed qualification work: check ingredient controls, batch release and traceability before feeding trials; hold a prototype if these cannot be demonstrated. This does not change the three opportunity rankings. Next question: can each proposed supplier document these controls?",
+      "limitation": "Lot-specific company notice, not final root-cause findings or evidence about dental chews, all supplements, fresh-food safety or consumer demand. Qualification work is proposed, not completed."
+    },
+    {
+      "id": "fancy-feast-paige-edit-2026",
+      "title": "Fancy Feast's Amazon-exclusive Paige Edit collection",
+      "publisher": "Nestlé Purina / Fancy Feast",
+      "url": "https://newscenter.purina.com/2026-09-10-Fancy-Feast-and-Paige-DeSorbo-Launch-The-Paige-Edit,-a-Limited-Edition-Collection-of-Daphnes-Favorites",
+      "dateLabel": "Published 2026-09-10; company-stated initial availability 2026-09-01; verified 2026-09-11",
+      "fact": "Purina announced an Amazon-exclusive, limited collection with two Gems recipes and a Classic Broths recipe. It describes Gems as complete adult-cat meals and Broths as a complement rather than a complete diet.",
+      "implication": "Channel and merchandising context, not grounds to select a new formulation. Next question: does a curated bundle generate repeat at full price compared with its separately sold recipes?",
+      "limitation": "Company announcement without independently checked stock, sales or repeat. Does not establish incremental demand, a new nutritional function or a reason to change the existing dog-food opportunity hypotheses."
+    },
+    {
+      "id": "adversarial-cesar-existing-topper",
+      "title": "CESAR Real Food For Dogs Recipes",
+      "publisher": "Mars / CESAR",
+      "url": "https://www.cesar.com/real-food",
+      "dateLabel": "Undated live product page; verified 2026-09-10",
+      "fact": "CESAR describes multi-serve resealable pouches stored in the pantry before opening, with leftovers refrigerated. The same page says its real-food lines can serve as dry-food toppers and includes Simply Crafted, Wholesome Bowls and Warm Bowls.",
+      "implication": "Shelf stability, visible ingredients and flexible topping are existing propositions. Convenience alone does not establish a defensible gap.",
+      "limitation": "Establishes marketed features, not availability at every store, prices, sales, adoption or repeat. Undated page cannot establish a launch date."
+    },
+    {
+      "id": "adversarial-appa-value-functional",
+      "title": "America’s Dog Owners Are Becoming Smarter Spenders",
+      "publisher": "American Pet Products Association",
+      "url": "https://americanpetproducts.org/news/americas-dog-owners-are-becoming-smarter-spenders",
+      "dateLabel": "2026-07-22; reports 2025 survey behavior",
+      "fact": "APPA reports average treat spending fell 11%, while chew purchasing reached 65% of dog owners (+5% year over year). It also reports basic dog-food feeding reached 21%, premium feeding 31%, and growing use of mixers/toppers among Gen Z.",
+      "implication": "Value pressure can constrain optional add-ons. The same evidence supports multifunctional chews and meal customization; it does not select a winner.",
+      "limitation": "Historical, self-reported survey summary. No topper-specific spending, paid repeat, causal effect or relative concept economics are disclosed."
+    },
+    {
+      "id": "adversarial-freshpet-volume-growth",
+      "title": "Freshpet, Inc. Reports Second Quarter 2026 Financial Results",
+      "publisher": "Freshpet",
+      "url": "https://investor.freshpet.com/news-releases/news-release-details/freshpet-inc-reports-second-quarter-2026-financial-results",
+      "dateLabel": "2026-08-05; quarter ended 2026-06-30",
+      "fact": "Freshpet reported Q2 net sales of $305.6 million, up 15.5%, driven by 15.7% volume growth and offset by 0.2% unfavorable price/mix. GAAP gross margin was 42.1%, versus 40.9% a year earlier. The company also reported increased logistics costs.",
+      "implication": "Fresh demand cannot be dismissed as price-led growth or assumed structurally unprofitable. An incumbent's scale may also make entry difficult.",
+      "limitation": "Company-level results are not a new entrant's unit economics or proof that full-meal users drove growth. Refrigerated food can also be mixed or topped."
+    },
+    {
+      "id": "adversarial-vohc-functional-benefits",
+      "title": "VOHC Accepted Products for Dogs",
+      "publisher": "Veterinary Oral Health Council",
+      "url": "https://vohc.org/wp-content/uploads/2026/08/VOHCAcceptedProductsTable_Dogs-8-25-26.pdf",
+      "dateLabel": "Document states last updated August 2026; filename contains 2026-08-25",
+      "fact": "VOHC lists accepted plaque/tartar claims for Canine Greenies and accepted tartar claims for Milk-Bone Brushing Chews and Purina DentaLife Daily Oral Care. Blue Buffalo Dental Chews are listed for tartar, with a 2025 seal award.",
+      "implication": "A dental-treat proposition has an established benefit-verification route and capable incumbents. Treats should remain in the comparison if meaningful function is central to value.",
+      "limitation": "Acceptance is product- and claim-specific. It does not establish sales, incremental demand, general health superiority, or efficacy of unlisted concepts."
+    },
+    {
+      "id": "adversarial-fda-nutritional-role",
+      "title": "Complete and Balanced Pet Food",
+      "publisher": "U.S. Food and Drug Administration",
+      "url": "https://www.fda.gov/animal-veterinary/animal-health-literacy/complete-and-balanced-pet-food",
+      "dateLabel": "Content current as of 2020-02-28; verified 2026-09-10",
+      "fact": "FDA distinguishes complete-and-balanced sole diets from treats, snacks and supplements that often are not complete and balanced. It states that a complete-and-balanced claim requires meeting an AAFCO nutrient profile or passing a feeding trial using AAFCO procedures.",
+      "implication": "An affordable add-on cannot inherit a complete meal's nutritional role. The claimed upgrade must be defined and supported at the amount actually fed.",
+      "limitation": "This guidance is not a comparative product trial and does not imply that all toppers lack nutritional adequacy."
+    },
+    {
+      "id": "adversarial-blue-fresh-mixing",
+      "title": "Blue Buffalo Launches Love Made Fresh Nationwide, Making Every Meal a Fresh Act of Love for Your Dog",
+      "publisher": "General Mills / Blue Buffalo",
+      "url": "https://www.generalmills.com/news-and-stories/press-releases/blue-buffalo-launches-love-made-fresh-nationwide-making-every-meal-a-fresh-act-of-love-for-your-dog",
+      "dateLabel": "2025-10-21 launch announcement",
+      "fact": "Love Made Fresh launched in resealable scoop-and-serve tubs and slice-and-serve rolls. Blue Buffalo explicitly positioned it for mixing with dry food and named Walmart, Target, Kroger and Meijer as retailers.",
+      "implication": "Fresh and topping are overlapping choices. A comparison that assumes fresh always requires replacing the entire diet biases the result toward a shelf-stable topper.",
+      "limitation": "Launch and named distribution are not evidence of adoption, retention or profitability. The announcement's custom-survey claim lacks sufficient disclosed methodology for extrapolation."
+    },
+    {
+      "id": "opportunity-S1",
+      "title": "America's Dog Owners Are Becoming Smarter Spenders: New APPA Report Reveals How 71 Million Households Are Prioritizing Their Pets in a Tight Economy",
+      "publisher": "American Pet Products Association",
+      "url": "https://americanpetproducts.org/news/americas-dog-owners-are-becoming-smarter-spenders",
+      "dateLabel": "2026-07-22",
+      "fact": "Premium food was fed by 31% of owners; basic food by 21%, with basic feeding up 11% year over year. The release explicitly describes blending premium and budget products; it does not publish a prevalence estimate for that behavior. 32% purchased dog food at supermarkets and 22% at discount retailers; APPA reports relative year-over-year increases of 7% and 22% respectively. 19% purchased human-grade food; the release describes growing Gen Z interest in mixers and toppers without a numeric penetration figure.",
+      "implication": "Relevant context for the opportunity hypotheses; the proposed advantage still needs direct testing.",
+      "limitation": "Public summary, not respondent-level data. Do not treat reported percentages as mutually exclusive, sales shares, or demand for the proposed product. Do not translate relative increases into percentage-point increases."
+    },
+    {
+      "id": "opportunity-S2",
+      "title": "U.S. Pet Industry Reaches $158 Billion in 2025, Poised for Continued Growth in 2026",
+      "publisher": "American Pet Products Association",
+      "url": "https://americanpetproducts.org/news/u.s.-pet-industry-reaches-158-billion-in-2025-poised-for-continued-growth-in-2026",
+      "dateLabel": "2026-03-26",
+      "fact": "US pet industry spending reached $158 billion in 2025, up 3.7%; this includes the broader pet industry, not merely food. 22% of pet owners reported spending less in 2025; about half reported unchanged spending. The $165 billion 2026 figure is a projection, not an observed result.",
+      "implication": "Relevant context for the opportunity hypotheses; the proposed advantage still needs direct testing.",
+      "limitation": "Category resilience is not evidence of incremental appetite for a new topper. A tighter budget can eliminate an add-on even when staple food spending holds."
+    },
+    {
+      "id": "opportunity-S3",
+      "title": "Pantry Fresh - Chicken & Rice 12.5 oz Case (6 Pack)",
+      "publisher": "JustFoodForDogs",
+      "url": "https://www.justfoodfordogs.com/product/pantryfresh-chicken-white-rice/10010102.html",
+      "dateLabel": "Undated page · verified 2026-09-10",
+      "fact": "Marketed for use as either a complete meal or topper; formulation states it meets AAFCO profiles for all life stages including large-dog growth. 12.5 oz pack; stated 387.5 kcal per pack. Up to two years unopened; refrigerate after opening and use within five days. The brand already promotes the product for travel and boarding. The manufacturer says rice starch provides consistency needed for the Tetra Pak packaging system.",
+      "implication": "Relevant context for the opportunity hypotheses; the proposed advantage still needs direct testing.",
+      "limitation": "Demonstrates direct competition and stated specifications, not independent nutritional superiority, shelf-life validation of a new recipe, or confirmed sell-through."
+    },
+    {
+      "id": "opportunity-S4",
+      "title": "Love Made Fresh | Premium Fresh Dog Food",
+      "publisher": "Blue Buffalo / General Mills",
+      "url": "https://www.bluebuffalo.com/natural-dog-food/love-made-fresh/",
+      "dateLabel": "Undated page · verified 2026-09-10",
+      "fact": "Refrigerated Love Made Fresh is explicitly marketed as a meal, mixed with dry food, or as a topper. The page shows shake-and-serve meatballs, slice-and-serve rolls, and scoop-and-serve stew tubs. The brand offers a Make a Better Meal tool based on a dog's preferences.",
+      "implication": "Relevant context for the opportunity hypotheses; the proposed advantage still needs direct testing.",
+      "limitation": "Incumbents already own mixed-feeding language and serving rituals. A feeding calculator or topper positioning alone would provide weak differentiation. This page does not establish adoption or willingness to pay."
+    },
+    {
+      "id": "opportunity-S5",
+      "title": "Complete and Balanced Pet Food",
+      "publisher": "US Food and Drug Administration",
+      "url": "https://www.fda.gov/animal-veterinary/animal-health-literacy/complete-and-balanced-pet-food",
+      "dateLabel": "Content current as of 2020-02-28",
+      "fact": "Complete-and-balanced adequacy requires meeting an AAFCO nutrient profile or passing an AAFCO-procedure feeding trial. Treats, snacks, and supplements are often not complete and balanced and are not generally intended as the sole diet. Wet versus dry nutrient percentages require adjustment for moisture before comparison.",
+      "implication": "Decide the proposed recipe's nutritional role early. A substantial meal replacement requires different validation from a small supplemental addition; serving instructions must account for displacement of the base food.",
+      "limitation": "Not a product-specific formulation assessment or legal opinion. No claim of health superiority follows from a fresh-looking format."
+    },
+    {
+      "id": "opportunity-S6",
+      "title": "Carton packages and retorting essentials",
+      "publisher": "Tetra Pak",
+      "url": "https://www.tetrapak.com/solutions/packaging/packages/food-packages/tetra-recart/everything-you-need-to-know-about-carton-packages-and-retorting",
+      "dateLabel": "Undated page · verified 2026-09-10",
+      "fact": "Retorting heat-treats food inside a sealed package to produce a commercially sterile product stable at ambient conditions before opening. Time and temperature must be evaluated for the specific food; preserving taste after heat treatment is a stated limitation. Filler/platform affects viscosity and particle-size capability. Cartons require appropriate retort racks and pressure control to avoid deformation. Retort processing differs from aseptic filling, where food and packaging are sterilized separately before filling.",
+      "implication": "Relevant context for the opportunity hypotheses; the proposed advantage still needs direct testing.",
+      "limitation": "Supplier explanation, not an independent cost model. Its sustainability and cost marketing is not used as a universal advantage. Do not turn its generic process temperatures or times into a production specification."
+    },
+    {
+      "id": "opportunity-S7",
+      "title": "NaturPak Pet Ramps Up Operations as First US Pet Food Co-Packer to Offer Tetra Pak Cartons",
+      "publisher": "Tetra Pak",
+      "url": "https://www.tetrapak.com/en-us/about-tetra-pak/news-and-events/newsarchive/naturpak-pet-ramps-up-operations-",
+      "dateLabel": "2021-05-05",
+      "fact": "A 162,000-square-foot Janesville, Wisconsin facility was announced for formulating, producing, and packaging wet pet food in Tetra Recart cartons. NaturPak described complete-and-balanced dog and cat products made with fresh whole-food ingredients.",
+      "implication": "Relevant context for the opportunity hypotheses; the proposed advantage still needs direct testing.",
+      "limitation": "Historical evidence that a US co-manufacturing route exists. Does not establish available 2026 capacity, qualification, minimum order, price, current ownership, or readiness for the proposed recipe."
+    }
+  ],
+  "tracks": [
+    {
+      "name": "Opportunity researcher",
+      "role": "Build the case for testing the idea.",
+      "finding": "Value-conscious shopping and mixed feeding support testing a meal add-on with a clear cost per serving. Shelf-stable formats already exist; value over repeated use needs testing.",
+      "sourceIds": [
+        "opportunity-S1",
+        "opportunity-S3",
+        "opportunity-S7"
+      ]
+    },
+    {
+      "name": "Independent challenger",
+      "role": "Find evidence that challenges the idea.",
+      "finding": "CESAR and JustFoodForDogs already offer similar formats. Freshpet reports volume growth, and functional chews remain alternatives. Compare paid repeat before choosing a format.",
+      "sourceIds": [
+        "adversarial-cesar-existing-topper",
+        "adversarial-freshpet-volume-growth",
+        "adversarial-vohc-functional-benefits"
+      ]
+    }
+  ],
+  "revisions": [
+    {
+      "before": "Shelf-stable mixed feeding is a gap in the market.",
+      "after": "The format exists. Specify what the proposed product would do better.",
+      "reason": "CESAR markets pantry-stored food as toppers; JustFoodForDogs sells Pantry Fresh as a meal or topper. The proposal needs a useful advantage over these alternatives.",
+      "sourceIds": [
+        "adversarial-cesar-existing-topper",
+        "opportunity-S3"
+      ]
+    },
+    {
+      "before": "Fresh costs too much to prioritize.",
+      "after": "Compare affordable fresh used for part of the meal.",
+      "reason": "Freshpet reported volume-driven growth in Q2 2026. Blue Buffalo promotes mixing fresh with dry food. Full-diet replacement does not represent every fresh-food purchase.",
+      "sourceIds": [
+        "adversarial-freshpet-volume-growth",
+        "adversarial-blue-fresh-mixing"
+      ]
+    },
+    {
+      "before": "A low daily price is enough to justify an add-on.",
+      "after": "Test paid repeat and value against products with a proven function.",
+      "reason": "APPA reports spending restraint and stronger chew purchasing. VOHC accepts product-specific dental claims. Low price alone does not prove added demand or a better product.",
+      "sourceIds": [
+        "adversarial-appa-value-functional",
+        "adversarial-vohc-functional-benefits"
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "pantry",
+      "title": "Pantry meal add-on",
+      "who": "Adult-dog kibble households already mixing food, shopping in grocery or discount channels and watching the weekly bill.",
+      "proposition": "Portioned cooked food with clear serving guidance and weekly cost. Test smaller leftovers as a benefit only if household observation finds real waste.",
+      "support": "Public surveys support value shopping and mixing. Existing shelf-stable products and a past co-manufacturing example make this worth investigating.",
+      "challenge": "Shelf-stable toppers and meals already exist. Smaller portions may raise packaging costs, and tight budgets may rule out optional add-ons.",
+      "unknown": "Whether purchases add sales or replace current products; portions by dog size; costs at launch volume; texture after retorting; co-manufacturing capacity; validated shelf life.",
+      "sourceIds": [
+        "opportunity-S1",
+        "opportunity-S3",
+        "opportunity-S6",
+        "opportunity-S7"
+      ],
+      "experiment": {
+        "title": "Will owners keep paying for it?",
+        "design": "After prototype qualification, compare the proposed upgrade with current household substitutes and a partial-ration fresh option. Randomize comparable owners, make real prices visible, and include a no-purchase choice. Follow paid replenishment over a proposed 6–8 weeks.",
+        "measure": "Full-price repeat and incremental contribution per household, after accounting for replaced wet food, toppers and treats. Obtain actual manufacturing and packaging quotes in parallel.",
+        "stop": "Stop or reformulate if the advantage disappears against existing substitutes, if household purchases mainly cannibalize existing sales, or if required price and product quality cannot coexist."
+      }
+    },
+    {
+      "id": "fresh",
+      "title": "Fresh meal add-on",
+      "who": "Owners interested in fresh who would consider upgrading part of the ration without changing the whole feeding routine.",
+      "proposition": "A small, regular fresh portion with a clear daily serving and realistic retail access. Compare it with the shelf-stable option at the same total feeding budget.",
+      "support": "Blue Buffalo markets fresh for mixing and topping. Freshpet reports volume-driven sales growth, so demand for refrigerated food should stay in the comparison.",
+      "challenge": "Large incumbents already compete here. Their margins do not show whether a new entrant can cover refrigerated distribution, spoilage, working capital and shelf access.",
+      "unknown": "Retailer access, costs and margins at feasible volume, repeat purchases at the target price, and purchases that replace current food.",
+      "sourceIds": [
+        "adversarial-freshpet-volume-growth",
+        "adversarial-blue-fresh-mixing",
+        "opportunity-S4"
+      ],
+      "experiment": {
+        "title": "Will owners keep paying more for fresh?",
+        "design": "Compare a qualified fresh partial-ration upgrade with a qualified ambient option and current substitutes. Match household feeding budget and account for dog size. Measure actual preparation, leftovers, refrigeration friction and paid replenishment over a proposed 6–8 weeks.",
+        "measure": "Contribution from sustained full-price use after freight, refrigeration, spoilage and displaced purchases. Separate product preference from brand familiarity.",
+        "stop": "Stop if channel access is unavailable, if recurring demand fails to cover the route-specific costs, or if the apparent fresh advantage vanishes at feasible prices."
+      }
+    },
+    {
+      "id": "dental",
+      "title": "Daily dental care",
+      "who": "Owners already purchasing chews who value an understandable daily-care function at a sustainable price.",
+      "proposition": "Daily dental care with an evidence-supported claim and a clear advantage for owners. The proposed product must support its own claims and compete with existing options.",
+      "support": "APPA reports substantial chew purchasing. VOHC accepts specific plaque or tartar claims for existing products, showing how claims can be validated.",
+      "challenge": "Established products already have accepted claims. A new product needs its own evidence, and the cited survey found pressure on total treat spending.",
+      "unknown": "Evidence for the actual product and intended serving, paid choice over existing products, and time needed to validate the claim before launch.",
+      "sourceIds": [
+        "adversarial-appa-value-functional",
+        "adversarial-vohc-functional-benefits",
+        "adversarial-fda-nutritional-role"
+      ],
+      "experiment": {
+        "title": "Will owners choose it over an accepted product?",
+        "design": "Select a qualified prototype with an appropriate substantiation plan. Compare consumer comprehension and paid preference against an accepted incumbent and no-purchase choice, with blinded and branded evaluation where appropriate. Validate efficacy separately using the applicable evidence pathway.",
+        "measure": "A substantiated benefit plus full-price repeat and incremental contribution. Neither stated intent nor an incumbent’s acceptance validates the new product.",
+        "stop": "Stop if the intended serving cannot deliver the proposed benefit, if the difference does not survive direct comparison, or if the required validation exceeds the feasible launch plan."
+      }
+    }
+  ],
+  "missionResults": []
+}
