@@ -1,18 +1,21 @@
 import { getChatGPTUser } from '@/app/chatgpt-auth';
 import { workspaceDb } from '@/lib/workspace-db';
-import { z } from 'zod';
+import { workspaceWriteSchema as schema } from '@/lib/workspace-schema';
 export const dynamic='force-dynamic';
-const text=z.string().trim().min(1).max(4000);
-const experimentData=z.object({opportunityId:z.string().min(1).max(160),status:z.literal('proposed'),title:text,design:text,measure:text,stop:text,advance:text,threshold:z.literal('Set before launch'),owner:z.string().max(160)});
-const competitiveData=z.object({opportunityId:z.string().min(1).max(160),move:text,assumptions:z.array(text).min(1).max(10),response:z.string().max(4000),evidenceVersion:z.string().max(80)});
-const schema=z.intersection(z.discriminatedUnion('kind',[
- z.object({kind:z.literal('mission'),id:z.string().uuid(),data:z.object({question:z.string().trim().min(15).max(2000),context:z.string().max(4000),status:z.literal('queued')})}),
- z.object({kind:z.literal('scenario'),id:z.literal('leadership'),data:z.object({maxDaily:z.number().min(.3).max(3),minMargin:z.number().min(20).max(60),ingredientShock:z.number().min(0).max(60),ambientOnly:z.boolean(),launchWeeks:z.number().min(8).max(60)})}),
- z.object({kind:z.literal('review'),id:z.string().min(1).max(160),data:z.object({status:z.enum(['unreviewed','investigate','watch','dismissed']),note:z.string().max(4000)})}),
- z.object({kind:z.literal('assumption'),id:z.string().min(1).max(160),data:z.object({title:text,question:text,status:z.enum(['Open','Supported','Challenged','Mixed'])})}),
- z.object({kind:z.literal('evidence'),id:z.string().uuid(),data:z.object({title:text,url:z.string().url().max(2000).refine(v=>/^https?:\/\//.test(v)),date:z.string().regex(/^\d{4}-\d{2}-\d{2}$/),source:text,fact:text,implication:text,question:text,dimension:z.enum(['Consumer','Competitor','Retailer','Technology','Economics']),assumptionId:z.string().max(160),relationship:z.enum(['Supports','Challenges','Context']),confidence:z.literal('User supplied'),origin:z.literal('User supplied'),priority:z.literal('Review')})}),
- z.object({kind:z.literal('experiment'),id:z.string().min(1).max(160),data:experimentData}),
- z.object({kind:z.literal('competitive_scenario'),id:z.string().min(1).max(160),data:competitiveData})
-]),z.object({expectedUpdatedAt:z.string().datetime().nullable().optional()}));
 export async function GET(){const user=await getChatGPTUser();if(!user)return Response.json({error:'Please sign in to load your workspace.'},{status:401});try{const r=await workspaceDb().prepare('SELECT kind,id,data,updated_at FROM workspace_records WHERE user_id = ? ORDER BY updated_at DESC').bind(user.userId).all();return Response.json({records:r.results.map((x:any)=>({...x,data:JSON.parse(x.data)}))},{headers:{'Cache-Control':'no-store'}});}catch(e){console.error('Workspace read failed',e);return Response.json({error:'Saved reviews are temporarily unavailable. Please try again.'},{status:503});}}
-export async function POST(req:Request){const user=await getChatGPTUser();if(!user)return Response.json({error:'Please sign in to save changes.'},{status:401});const origin=req.headers.get('origin');if(origin&&origin!==new URL(req.url).origin)return Response.json({error:'This request is not allowed.'},{status:403});if(Number(req.headers.get('content-length')||0)>30000)return Response.json({error:'This entry is too long.'},{status:413});let raw;try{const body=await req.text();if(body.length>30000)return Response.json({error:'This entry is too long.'},{status:413});raw=JSON.parse(body);}catch{return Response.json({error:'Please check this entry.'},{status:400});}const parsed=schema.safeParse(raw);if(!parsed.success)return Response.json({error:'Please complete every required field.'},{status:400});try{const p=parsed.data;const existing=await workspaceDb().prepare('SELECT updated_at FROM workspace_records WHERE user_id=? AND kind=? AND id=?').bind(user.userId,p.kind,p.id).first<{updated_at:string}>();if(existing&&p.expectedUpdatedAt!==existing.updated_at)return Response.json({error:'This record changed since you loaded it. Refresh saved work and reconcile your edits.',conflict:true,currentUpdatedAt:existing.updated_at},{status:409});const updated=new Date().toISOString();await workspaceDb().prepare('INSERT INTO workspace_records (user_id,kind,id,data,updated_at) VALUES (?,?,?,?,?) ON CONFLICT(user_id,kind,id) DO UPDATE SET data=excluded.data,updated_at=excluded.updated_at').bind(user.userId,p.kind,p.id,JSON.stringify(p.data),updated).run();return Response.json({record:{kind:p.kind,id:p.id,data:p.data,updated_at:updated}});}catch(e){console.error('Workspace write failed',e);return Response.json({error:'Your change could not be saved. Your text is still here; please try again.'},{status:503});}}
+export async function POST(req:Request){const user=await getChatGPTUser();if(!user)return Response.json({error:'Please sign in to save changes.'},{status:401});const origin=req.headers.get('origin');if(origin&&origin!==new URL(req.url).origin)return Response.json({error:'This request is not allowed.'},{status:403});if(Number(req.headers.get('content-length')||0)>30000)return Response.json({error:'This entry is too long.'},{status:413});let raw;try{const body=await req.text();if(body.length>30000)return Response.json({error:'This entry is too long.'},{status:413});raw=JSON.parse(body);}catch{return Response.json({error:'Please check this entry.'},{status:400});}const parsed=schema.safeParse(raw);if(!parsed.success)return Response.json({error:'Please complete every required field.'},{status:400});try {
+  const p = parsed.data;
+  const db = workspaceDb();
+  const previous = p.expectedUpdatedAt;
+  // A revision always advances, including two saves within one millisecond.
+  const updated = new Date(Math.max(Date.now(), previous ? Date.parse(previous) + 1 : 0)).toISOString();
+  const payload = JSON.stringify(p.data);
+  const result = previous === null
+    ? await db.prepare('INSERT INTO workspace_records (user_id,kind,id,data,updated_at) VALUES (?,?,?,?,?) ON CONFLICT(user_id,kind,id) DO NOTHING').bind(user.userId,p.kind,p.id,payload,updated).run()
+    : await db.prepare('UPDATE workspace_records SET data=?,updated_at=? WHERE user_id=? AND kind=? AND id=? AND updated_at=?').bind(payload,updated,user.userId,p.kind,p.id,previous).run();
+  if (!result.meta.changes) {
+    const current = await db.prepare('SELECT kind,id,data,updated_at FROM workspace_records WHERE user_id=? AND kind=? AND id=?').bind(user.userId,p.kind,p.id).first<{kind:string;id:string;data:string;updated_at:string}>();
+    return Response.json({error:'This record changed in another session. Compare the saved version with your draft before saving again.',conflict:true,current:current ? {...current,data:JSON.parse(current.data)} : null},{status:409});
+  }
+  return Response.json({record:{kind:p.kind,id:p.id,data:p.data,updated_at:updated}});
+}catch(e){console.error('Workspace write failed',e);return Response.json({error:'Your change could not be saved. Your text is still here; please try again.'},{status:503});}}

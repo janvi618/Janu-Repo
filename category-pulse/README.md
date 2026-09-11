@@ -49,11 +49,25 @@ The scheduled task's prompt includes the Decision Lab protocol: read D1 records 
 
 ## Saved user work
 
-D1 `workspace_records` stores per-user evidence, assumption overrides, signal reviews, queued missions, saved scenario constraints and live investigations. Its primary key is user_id + kind + id. All HTTP access checks the platform-authenticated user; queries are scoped to that user. User-entered evidence is not silently validated by the model. Research tasks can read these records with native Sites database tools for context but must not overwrite notes or override the user's judgments. Option economics edits are session-only; the UI states this separately from saved constraints.
+D1 `workspace_records` stores per-user evidence, assumption overrides, signal reviews, queued missions, saved scenario constraints and live investigations. Its primary key is user_id + kind + id. All HTTP access checks the platform-authenticated user; queries are scoped to that user. User-entered evidence is not silently validated by the model. Research tasks can read these records with native Sites database tools for context but must not overwrite notes or override the user's judgments. Commercial constraint edits remain drafts until saved; reset does not persist until Save is selected.
 
 The baseline is versioned with the Site; personal decisions persist independently. `Refresh saved work` reloads saved reviews and added evidence. Reload the page to get a newly published research baseline.
 
-## Verification
+## PR #3 verification — September 11, 2026
+
+The recovered implementation has been checked in a separate checkout of the same Site. The first external Codex environment could not install dependencies; this verification used the existing pinned installer and reused 629 packages without downloads.
+
+- Production framework build and TypeScript checks pass.
+- `pnpm run test:workspace` runs 12 checks against isolated local Miniflare D1, with synthetic authenticated identities. It covers persistence across a D1 runtime restart, two-user separation, atomic concurrent-edit conflicts, duplicate creation, rejected anonymous/cross-origin writes, supported record validation, scenario/experiment round trips and distinct competitor responses. It never invokes a research provider or writes production records.
+- `pnpm run validate:data` validates the recorded 10 signals, 15 sources, four opportunities and existing mission-result references.
+- Both interfaces send loaded revisions. Conflicts preserve drafts and expose the saved version for explicit reconciliation.
+- Competitor choices change conditional analysis and reload from saved records. The original commercial formulas and inputs remain accessible in the competitive-scenario view.
+- Guided demo ignores saved experiments/scenarios/questions and disables persistence. Restart clears only transient demo choices; exiting restores the prior view. `/#demo` opens the walkthrough directly.
+- Mobile navigation is wired, source inspection scrolls, and recorded mission answers are displayed with their source references.
+
+Browser interaction, visual screenshot QA, deployed authentication and live research execution have not been verified in this pass. Managed Linux preview is internal and cannot be handed to the user as a preview URL. The existing Site was inspected as public; private-only publication remains blocked until the owner explicitly authorizes the audience change. No Site access, schedule, credentials, provider calls or production database records were changed.
+
+## Earlier baseline verification
 
 TypeScript and production build are required before publishing source changes. Schema changes require a new inspected Drizzle migration. Applied migrations are immutable. No browser QA was requested for the initial build; WebMCP registration is feature-detected, with supported-browser validation unavailable in this environment. The app includes read-insights and save-review WebMCP tools that share the actual API and visible state.
 
