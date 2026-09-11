@@ -1,5 +1,24 @@
 # Pulse Decision Lab — Pet Food
 
+## Always-on Insight Engine experience
+
+The home route is now an opportunities-first decision workspace. It separates the recorded September 11 pass (11 readable pages and two added signals) from a deterministic five-step guided demo whose 60-page / seven-signal headline is always labeled illustrative. The full view retains pantry, fresh and dental and adds the stable `bundle` opportunity; each featured example connects evidence and its direct source to a hypothetical competitor response, a proposed experiment and decision history.
+
+Workspace edits for proposed experiments and competitive scenarios use the existing authenticated, user-scoped D1 table. Writes include an optimistic revision precondition, so a stale browser receives a reviewable `409` conflict rather than overwriting newer work. The live executor context reader accepts missions, evidence, reviews, assumptions, experiments and both scenario record kinds; unsupported kinds are reported instead of silently entering a prompt. Demo restart only resets in-memory demo navigation and never writes workspace or baseline records.
+
+### Five-minute walkthrough
+
+1. On **Overview**, read the proposed matched-budget comparison and its principal uncertainty. Confirm the orange recorded-run strip says 11 pages / two signals.
+2. Choose **Start demo**. The persistent banner identifies all scenarios and the 60 / 7 counter as illustrative.
+3. Step through bundle, fresh and dental. Open a source, challenge the opportunity under **Competitive scenarios**, then open its proposed test.
+4. Finish in **Research history**, where the bundle priority hold and preserved research revisions are visible. Restart or exit; recorded and saved work is unchanged.
+
+### Local verification and operating boundaries
+
+Run `pnpm validate:data`, `pnpm lint`, and `pnpm build` from this directory. Portable local development uses `pnpm dev`, the checked-in localhost-only synthetic sign-in and local D1 binding. Apply `drizzle/0000_reflective_rhino.sql` to local D1 before testing saves. This can verify authenticated local persistence but does not establish deployed persistence.
+
+The existing external ChatGPT Task remains the only scheduler. No scheduler, credential, Site audience or project identity is changed here. Immediate research remains disabled without a server-side `OPENAI_API_KEY`; a configured key, model entitlement, budget and successful provider request are all still required before real execution may be described as working. Publication is not requested by this change. The existing Site project ID remains in `.openai/hosting.json`; deployment requires separately authorized Site access and an audience check.
+
 Private investigation and decision workspace for CPG innovation. The root route presents a completed adversarial investigation, an editable commercial screen, proposed experiments and a research queue. `/signals` preserves the original evidence workspace and saved reviews.
 
 ## Research updates
